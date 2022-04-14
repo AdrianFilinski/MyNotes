@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteApp</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f3093c91d7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="menu">
+        <h1><i class="fas fa-solid fa-note">MyNotes</i></h1>
+        <div class="menu-buttons">
+            <button class="add icon"><i class="fas fa-plus"></i>Add</button>
+            <button class="delete-all icon"><i class="fas fa-trash-alt">Remove all</i></button>
+        </div>
+    </div>
+
+    <div class="note-area">
+        <div class="note">
+            <div class="note-header">
+                <h3 class="note-title">Note #1</h3>
+                <button class="delete-note">
+                    <i class="fas fa-times icon"></i>
+                </button>
+            </div>
+            <div class="note-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus
+                voluptates architecto deserunt deleniti qui consectetur incidunt, nobis consequuntur eaque labore, iure
+                non distinctio nostrum similique sunt fugiat quasi. Perspiciatis?</div>
+        </div>
+    </div>
+
+    <div class="note-panel">
+        <h2>Add note</h2>
+        <label for="category">Select a category</label>
+        <select id="category">
+            <option value="0" disabled selected>-- select a category</option>
+            <option value="1">JavaScript learning</option>
+            <option value="1">Angular learning</option>
+            <option value="1">English</option>
+            <option value="1">Other</option>
+        </select>
+
+        <label for="text">Type your note text</label>
+        <textarea id="text"></textarea>
+
+        <p class="error">Complete all fields!</p>
+
+        <div class="panel-buttons">
+            <button class="save icon"><i class="fas fa-save"></i>Save</button>
+            <button class="cancel icon"><i class="fas fa-window-close"></i>Cancel</button>
+        </div>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
