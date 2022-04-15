@@ -25,5 +25,14 @@ const closePanel = () => {
     category.selectedIndex = 0;
 }
 
+const addNote = () => {
+    if (textArea.value !== '' && category.options[category.selectedIndex].value !== '0') {
+        createNote();
+        error.style.visibility = 'hidden'
+    } else {
+        error.style.visibility = 'visibility'
+    }
+}
+
 addBtn.addEventListener('click', openPanel)
 cancelBtn.addEventListener('click', closePanel)
