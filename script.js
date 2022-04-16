@@ -51,10 +51,29 @@ const createNote = () => {
     `
     noteArea.appendChild(newNote);
     cardID++;
+
+    checkColor(newNote);
 }
 
 const selectValue = () => {
     selectedValue = category.options[category.selectedIndex].text;
+}
+
+const checkColor = note => {
+    switch (selectedValue) {
+        case 'JavaScript':
+            note.style.backgroundColor = 'rgb(255, 243, 0)';
+            break;
+        case 'Angular':
+            note.style.backgroundColor = 'rgb(240, 25, 25)';
+            break;
+        case 'TypeScript':
+            note.style.backgroundColor = 'rgb(0, 170, 255)';
+            break;
+        case 'Other':
+            note.style.backgroundColor = 'rgb(205, 133, 63)';
+            break;
+    }
 }
 
 addBtn.addEventListener('click', openPanel)
