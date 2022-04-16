@@ -10,7 +10,7 @@ const category = document.querySelector('#category')
 const textArea = document.querySelector('#text')
 const error = document.querySelector('.error')
 
-let selectValue;
+let selectedValue;
 
 let cardID = 0;
 
@@ -42,13 +42,19 @@ const createNote = () => {
     newNote.innerHTML =
         `
     <div class="note-header">
-                <h3 class="note-title">${selectValue}</h3>
+                <h3 class="note-title">${selectedValue}</h3>
                 <button class="delete-note">
                     <i class="fas fa-times icon"></i>
                 </button>
             </div>
             <div class="note-body">${textArea.value}</div>
     `
+    noteArea.appendChild(newNote);
+    cardID++;
+}
+
+const selectValue = () => {
+    selectedValue = category.options[category.selectedIndex].text;
 }
 
 addBtn.addEventListener('click', openPanel)
