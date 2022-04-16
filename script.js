@@ -30,9 +30,27 @@ const addNote = () => {
         createNote();
         error.style.visibility = 'hidden'
     } else {
-        error.style.visibility = 'visibility'
+        error.style.visibility = 'visible'
     }
+}
+
+const createNote = () => {
+    const newNote = document.createElement('div');
+    newNote.classList.add('note');
+    newNote.setAttribute('id', cardID);
+
+    newNote.innerHTML =
+        `
+    <div class="note-header">
+                <h3 class="note-title">${selectValue}</h3>
+                <button class="delete-note">
+                    <i class="fas fa-times icon"></i>
+                </button>
+            </div>
+            <div class="note-body">${textArea.value}</div>
+    `
 }
 
 addBtn.addEventListener('click', openPanel)
 cancelBtn.addEventListener('click', closePanel)
+saveBtn.addEventListener('click', createNote)
