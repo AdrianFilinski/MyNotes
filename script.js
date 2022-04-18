@@ -52,8 +52,8 @@ const createNote = () => {
     noteArea.appendChild(newNote);
     cardID++;
     textArea.value = '';
-    category.selectedIndex = 0
-
+    category.selectedIndex = 0;
+    notePanel.style.display = 'none'
     checkColor(newNote);
 }
 
